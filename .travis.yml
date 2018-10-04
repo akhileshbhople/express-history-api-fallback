@@ -1,14 +1,13 @@
-os: 
-  - linux
-  - linux-ppc64le
-sudo: false
-
 language: node_js
 node_js:
   - 4
   - 0.12
   - 0.10
   - iojs
+matrix:
+  include:
+  - os: linux-ppc64le
+    node_js: 4
 cache:
   directories:
     - node_modules
